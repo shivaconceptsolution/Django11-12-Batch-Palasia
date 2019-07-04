@@ -1,0 +1,91 @@
+DJANGO Framework:-
+.........................................................................
+it is web framework which is used to create dynamic web application using client side and server side based script.
+
+framework means software which contain predefine library and design pattern to create application .
+
+framework provide separate directory to write code for design ,logic and database.
+
+it provide better security and performance as compare to normal application development.
+
+Django framework is based on CLI (Command language interface).
+
+CLI means command interface which contain predefine command to create project ,application and db integration.
+
+................................................................................
+
+
+Client side and server side script:-
+
+
+client side means browser supported script means this type script will be directly executed on web browser.
+
+client side script:-
+
+HTML,JS,CSS,Jquery
+to design web page
+
+Server side script:-
+this type of script will be executed by Web Server .it is used for dynamic operation
+
+1 to write program code
+2 to perform database operation
+
+python script will be used in django as a server side script.
+
+.....................................................................................................
+
+How we install django:-
+1 install python 3.x version
+
+2 pip install django
+
+3  if pip is not available download pip and save in c:/
+
+4  python get-pip.py
+
+5 check django version
+
+    python -m django --version
+
+
+6  create project
+
+      django-admin startproject projectname
+
+7 enter project folder
+
+    cd projectname
+
+8 start server
+    python manage.py runserver
+
+............................................
+
+
+pip install django
+
+django-admin startproject projectname
+
+python manage.py runserver
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
