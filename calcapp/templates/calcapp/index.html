@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="" method="post" name="frm1">
+ {% csrf_token  %}
+<input type="text" name="txtnum1" placeholder="enter first number" value="{{num1}}" />
+<br>
+<br>
+<input type="text" name="txtnum2" placeholder="enter second number" value="{{num2}}">
+<br>
+<br>
+<input type="submit" name="btnadd" value="+">
+<input type="submit" name="btnsub" value="-">
+<input type="submit" name="btnmulti" value="*">
+<input type="submit" name="btndiv" value="/">
+
+
+
+</form>
+
+{{key}}
+
+</body>
+</html>
