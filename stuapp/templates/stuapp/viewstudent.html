@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table
+		{
+			background-color: gray;
+			color:blue;
+			width: 700px;
+
+		}
+        table th
+        {
+        	background-color: black;
+        	color:white;
+        	font-size: 25px;
+        }
+	</style>
+</head>
+<body>
+
+<center>
+	<h1>View ALL STudent Record</h1>
+<table border="1">
+	<tr><th>ID</th><th>Rno</th><th>Sname</th><th>Branch</th><th>Fees</th></tr>
+{% for data in s   %}
+
+<tr>
+<td>{{data.id}}</td>	
+<td>{{data.rno}}</td>
+<td> {{data.name}}</td>
+<td> {{data.branch}} 
+</td><td> {{data.fees}}</td>
+</tr>
+
+{% endfor %}
+</table>
+</center>
+</body>
+</html>
