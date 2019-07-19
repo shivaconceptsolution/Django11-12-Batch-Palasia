@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Welcome in LOGIN APP</h1>
+<form action="logincode" method="post">
+{% csrf_token %}
+<input type="text" name="txtuser" placeholder="Enter username"/>
+<br>
+<br>
+<input type="password" name="txtpass" placeholder="Enter password" />
+<br>
+<br>
+<input type="submit" name="btnsubmit" value="Login" />
+
+</form>
+<a href="register">NEW USER REGISTER HERE</a>
+<br>
+{{key}}
+</body>
+</html>
