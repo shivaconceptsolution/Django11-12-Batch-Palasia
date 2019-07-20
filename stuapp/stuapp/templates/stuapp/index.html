@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Welcome in Student App</h1>
+<a href="logout">logout</a>
+<form action="insertstudent" method="post">
+{% csrf_token %}
+
+<input type="text" name="txtrno" placeholder="enter rno" required="" />
+<br>
+<br>
+<input type="text" name="txtname" placeholder="enter sname" required="" />
+<br>
+<br>
+<input type="text" name="txtbranch" placeholder="enter branch" required="" />
+<br>
+<br>
+<input type="text" name="txtfees" placeholder="enter fees" required="" />
+<br>
+<br>
+<input type="submit" name="btninsert" value="Add" />
+
+</form>	
+{{key}}
+<br>
+<br>
+<a href="viewstudent">View Student's Record</a>
+</body>
+</html>
