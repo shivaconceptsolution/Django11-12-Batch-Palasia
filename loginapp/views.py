@@ -8,7 +8,9 @@ def logincode(request):
 	uname = request.POST["txtuser"]
 	pass1 = request.POST["txtpass"]
 	res = Login.objects.filter(username=uname,password=pass1)
-	if len(res)>0:
+	if count(res)>0:
+		instance = res.values('id')[0]
+		request.session["sid"]=instance['id']
 		request.session["uid"]=uname
 		return redirect('/stuapp')
 	else:
