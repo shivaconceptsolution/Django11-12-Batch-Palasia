@@ -1,9 +1,12 @@
 from django.shortcuts import redirect,render
 from django.http import HttpResponse
 from .models import Student
+from loginapp.models import Login
 def index(request):
    if request.session.has_key('uid'):
-     return render(request,"stuapp/index.html")
+     s = request.session["sid"]
+     stu = Login.objects.get(pk=s)
+     return render(request,"stuapp/index.html",{'k':stu})
    else:
      return redirect('/loginapp')  
 def insertstudent(request):
