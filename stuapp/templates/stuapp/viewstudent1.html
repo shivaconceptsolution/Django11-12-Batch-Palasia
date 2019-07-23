@@ -1,0 +1,15 @@
+<table border="1">
+	<tr><th>ID</th><th>Rno</th><th>Sname</th><th>Branch</th><th>Fees</th></tr>
+{% for data in s   %}
+
+<tr>
+<td>{{data.id}}</td>	
+<td>{{data.rno}}</td>
+<td> {{data.name}}</td>
+<td> {{data.branch}} 
+</td><td> {{data.fees}}</td>
+<td><a href="editstudent?q={{data.id}}">Edit</a></td><td><a href="deletestudent?q={{data.id}}">Delete</a></td>
+</tr>
+
+{% endfor %}
+</table>

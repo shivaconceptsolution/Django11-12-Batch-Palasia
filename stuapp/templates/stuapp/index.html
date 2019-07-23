@@ -2,13 +2,33 @@
 <html>
 <head>
 	<title></title>
+	<script>
+      function fun(a)
+		{
+          xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange=function()
+          {
+          document.getElementById("res").innerHTML = xmlhttp.responseText;  
+          }
+          xmlhttp.open("GET","checkrno?q="+a,true);
+          xmlhttp.send();
+
+		}
+
+
+	</script>
 </head>
 <body>
 <h1>Welcome in Student App</h1>
+<a href="logout">logout</a>
+<br>
+<br>
+<div style="float: left;">
 <form action="insertstudent" method="post">
 {% csrf_token %}
 
-<input type="text" name="txtrno" placeholder="enter rno" required="" />
+<input type="text" name="txtrno" placeholder="enter rno" onblur="fun(this.value)" required="" />
+<span id="res"></span>
 <br>
 <br>
 <input type="text" name="txtname" placeholder="enter sname" required="" />
@@ -27,5 +47,14 @@
 <br>
 <br>
 <a href="viewstudent">View Student's Record</a>
+</div>
+<div style="float: right">
+<p>ID is {{k.id}}</p>
+<p>Username is {{k.username}}</p>
+<p>Password is {{k.password}}</p>
+<p>Email is {{k.email}}</p>
+<p>Mobile no is {{k.mobile}}</p>
+
+</div>
 </body>
 </html>
