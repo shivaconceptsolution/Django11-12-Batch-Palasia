@@ -15,8 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include,path
-
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
+    path('fileupload/',include('fileuploadapp.urls')),
+    path('stuapp/',include('stuapp.urls')),
+    path('loginapp/',include('loginapp.urls')),
+    path('calcapp/',include('calcapp.urls')),
+    path('swipapp/',include('swipapp.urls')),
+    path('siapp/',include('siapp.urls')),
+    path('primenumber/',include('primenumber.urls')),
+    path('formexample/',include('formexample.urls')),
+    path('resto/',include('resoapp.urls')),
     path('guestapp/',include('guestapp.urls')),
     path('admin/', admin.site.urls),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
